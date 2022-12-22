@@ -6,6 +6,7 @@ import styles from '../styles/PaletteStyles'
 import seederColor from '../seederColor'
 import NavMenu from '../components/NavMenu'
 import PaletteFooter from '../components/PaletteFooter'
+import MainNavBar from '../components/MainNavBar'
 import { withStyles } from '@material-ui/styles'
 
 
@@ -40,6 +41,7 @@ const SingleColorPalette = (props) => {
 
   return (
     <div className={classes.Palette}>
+            <MainNavBar />
       <NavMenu passLevel={passLevel} passColorType={passColorType} showSlider={false} />
       <div className={classes.PaletteColors}>
 

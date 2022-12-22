@@ -46,7 +46,7 @@ const UserForm = (props) => {
 
 
     return (
-        <form onSubmit={onSubmitHandler} className="my-2 flex flex-col justify-center [&>*]:text-md text-white ">
+        <form onSubmit={onSubmitHandler} className="my-2 flex flex-col justify-center [&>*]:text-md text-white  h-[300px]">
             {errors.map((err, index) => <p className='text-red-500 font-bold' key={index}>{err}</p>)}
             <p  className='flex my-3'>
                 <label className="basis-1/3 font-bold ">First Name: </label>
@@ -69,7 +69,7 @@ const UserForm = (props) => {
                 <label className="basis-1/3  font-bold ">Confirm Password: </label>
                 <input className='border-2 border-slate-300 rounded w-full basis-2/3 md:basis-3/4  text-black' type="text" onChange={(e) => changeHandler(e)} value={user.PasswordConfirm} name="PasswordConfirm" />
             </p>
-            <input className='p-1 bg-indigo-400 rounded w-2/3 mx-auto hover:cursor-pointer hover:scale-105 hover:bg-indigo-200 font-semibold text-white text-center flex-none' type="submit" />
+            <input className='p-1 bg-[#252afd] rounded w-2/3 mx-auto hover:cursor-pointer hover:scale-105 hover:bg-blue-300 font-semibold text-white text-center flex-none' type="submit" />
         </form>
     )
 }

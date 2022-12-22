@@ -1,3 +1,5 @@
+
+
 export default {
     root: {
         backgroundColor:"white",
@@ -9,12 +11,9 @@ export default {
         "&:hover": {
             cursor: "pointer"
         },
-        flexBasis:"30%",
-        margin:"3px 3px",
-        // "&:hover svg": {
-        //     color: "red",
-        //     transform: "scale(1.2)"
-        // }
+        width:"31%",
+        margin:"5px",
+
     },
     colors: {
         backgroundColor:"#dae1e4",

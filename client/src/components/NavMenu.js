@@ -70,11 +70,10 @@ const NavMenu = (props) => {
 
 
   return (
-<div className={`h-[12vh] static flex items-center flex ${showSlider && "justify-between lg:w-1/2 mx-auto"}`}>
-  <Link to="/dashboard" className={`${showSlider ? "lg:w-1/10" : "lg:w-1/2"}`}>ColorPallete</Link>
-  <div className={`flex ${showSlider ? "justify-around" : "justify-between lg:justify-end"} items-center  my-10 w-full`}>
+<div className={`h-[12vh] static flex items-center flex  ${showSlider ? "justify-between lg:w-1/2 mx-auto" : "justify-center"}`}>
+  <div className={`flex ${showSlider ? "justify-around w-full" : "justify-center s"} items-center  my-10 `}>
     {showSlider && <>
-      <p className=''>Level: {state.level}</p>
+      <p className='text-white z-10'>Level: {state.level}</p>
       <div className='slider'>
         <Box width={300} className="mx-auto">
           <Slider defaultValue={500} step={100} min={100} max={900} aria-label="Default" valueLabelDisplay="auto" className="" onChange={(e) => { dispatch({ type: "set", e }); passLevel(e.target.value) }} />
@@ -83,7 +82,7 @@ const NavMenu = (props) => {
     </>}
   </div>
   <Box sx={{ minWidth: 120 }}>
-    <Select value={colorType} onChange={(e) => SnackBar(e)}>
+    <Select className="bg-white" value={colorType} onChange={(e) => SnackBar(e)}>
       {options.map((option) => <MenuItem value={option.value}>{option.label}</MenuItem>)}
     </Select>
   </Box>

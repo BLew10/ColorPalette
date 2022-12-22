@@ -1,8 +1,8 @@
 export default {
     root: {
         display: "flex",
-        height: "100%",
-        backgroundColor: "blue",
+        width:"100%",
+        background: "linear-gradient(to right, #222, #999)",
         alignItems: "flex-start",
         justifyContent: "center"
 
@@ -11,11 +11,10 @@ export default {
         width: "50%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "blue",
-        alignItems: "flex-start",
-        flexWrap: "wrap"
-
-
+        alignItems: "center",
+        justifyContent:"start",
+        height: "100%",
+        margin: "auto"
     },
     nav: {
         display: "flex",
@@ -29,7 +28,11 @@ export default {
         boxSizing: "border-box",
         width: "100%",
         display: "flex",
-        flexWrap: "wrap"
+        alignItems: "start",
+        justifyContent:"start",
+        flexWrap: "wrap",
+        
 
     }
+    
 }

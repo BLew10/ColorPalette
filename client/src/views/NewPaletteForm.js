@@ -148,7 +148,6 @@ const NewPaletteForm = (props) => {
   }
 
   const clearPalette = () => {
-    console.log(JSON.stringify(colors))
     setColors([])
   }
 
@@ -182,13 +181,7 @@ const NewPaletteForm = (props) => {
       "max_tokens": 1500
     }
     ).then(response => {
-
-
-
-      console.log(response.data.choices[0].text)
-      console.log(getStringFromFirstBracket(response.data.choices[0].text))
       let ai = JSON.parse(response.data.choices[0].text)
-      console.log(ai)
       setColors(ai.splice(0,number))
       setAiLoading(false)
     })
@@ -199,7 +192,7 @@ const NewPaletteForm = (props) => {
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} className ="bg-gradient-to-r from-slate-900 to-gray-500 h-[100vh] w-[100%]">
       <PaletteNavFrom open={open} handleDrawerOpen={handleDrawerOpen} handleChange={handleChange} newPaletteName={newPaletteName} handleSubmit={handleSubmit} />
       <Drawer
         sx={{
@@ -213,14 +206,14 @@ const NewPaletteForm = (props) => {
         variant="persistent"
         anchor="left"
         open={open}
-        className={`h-full`}
+        className={`h-full `}
       >
-        <DrawerHeader>
+        <DrawerHeader className='bg-black'>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <ChevronLeftIcon className='text-white' /> : <ChevronRightIcon className='text-white' />}
           </IconButton>
         </DrawerHeader>
-        <div className={`flex flex-col items-center justify-center h-full `}>
+        <div className={`flex flex-col items-center justify-center h-full bg-black `}>
           <ColorPicker handleColorChange={handleColorChange} addRandomColor={addRandomColor} addColor={addColor} newColorName={newColorName} handleChange={handleChange} paletteIsFull={paletteIsFull} newPaletteColor={newPaletteColor} clearPalette={clearPalette} aiGeneratedPalette={aiGeneratedPalette} />
         </div>
       </Drawer>
@@ -230,7 +223,7 @@ const NewPaletteForm = (props) => {
           <DraggableList colors={colors} removeColor={removeColor} onSortEnd={onSortEnd} axis="xy" /> :
           <Box className='flex flex-col w-full h-full items-center justify-center'>
             <CircularProgress />
-            <div>Retreiving Your AI Generated Palette</div>
+            <div className='text-white'>Retreiving Your AI Generated Palette</div>
           </Box>
         }
       </Main>

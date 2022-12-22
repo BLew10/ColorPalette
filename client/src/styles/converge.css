@@ -1,0 +1,180 @@
+@keyframes convergeRed {
+    0% {
+        top: 50%;
+        left: 0;
+    }
+
+    80% {
+        top: 50%;
+        left: 40%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
+.corner-div-red {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    animation: convergeRed 3s ease-in-out;
+}
+
+@keyframes convergeGreen {
+    0% {
+        top: 50%;
+        left: 0%;
+    }
+
+    80% {
+        top: 50%;
+        left: 45%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
+.corner-div-green {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    animation: convergeGreen 3s ease-in-out;
+}
+
+@keyframes convergeBlue {
+    0% {
+        top: 50%;
+        left: 0%;
+    }
+
+    80% {
+        top: 50%;
+        left: 50%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
+.corner-div-blue {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    animation: convergeBlue 3s ease-in-out;
+}
+
+@keyframes convergeYellow {
+    0% {
+        top: 50%;
+        left: 0%;
+    }
+
+    80% {
+        top: 50%;
+        left: 55%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
+.corner-div-yellow {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    animation: convergeYellow 3s ease-in-out;
+}
+
+@keyframes convergePurple {
+    0% {
+        top: 50%;
+        left: 0%;
+    }
+
+    80% {
+        top: 50%;
+        left: 60%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
+.corner-div-purple {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: purple;
+    animation: convergePurple 3s ease-in-out;
+}
+.corner-div-yellow.show,.corner-div-green.show, .corner-div-blue.show, .corner-div-red.show, .corner-div-purple.show  {
+display: hidden;
+opacity: 0;
+}
+
+.splash.show {
+opacity: 1;
+}
+
+.name {
+    opacity: 0;
+    transition: opacity 10s ease-in-out
+}
+
+.name.show {
+    opacity: 1;
+}
+
+.splash {
+    opacity: 0;
+    transition: opacity 2s ease-in-out
+  }
+  
+  @keyframes splash {
+    0% {
+        top: 50%;
+        left: 0%;
+      transform: translate(-50%, -50%);
+    }
+    25% {
+        top: 20%;
+        left: 3%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50% {
+        top: 53%;
+        left: 89%;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+        top: 7%;
+        left: 18%;
+      transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100% {
+        top:  50%;
+        left: 0%;
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+

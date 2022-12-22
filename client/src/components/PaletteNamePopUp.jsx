@@ -16,6 +16,7 @@ const PaletteNamePopUp = (props) => {
   const [stage, setStage] = useState("form");
 
   const handleClickOpen = () => {
+    console.log("here")
     setOpen(true);
   };
 
@@ -33,7 +34,7 @@ const PaletteNamePopUp = (props) => {
   }
   return (
     <div>
-      <Button variant="contained" color="secondary" onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen} className="bg-slate-300">
         Save
       </Button>
 

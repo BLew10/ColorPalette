@@ -1,8 +1,9 @@
 export default {
     Palette: {
-      height: "80vh",
+      height: "100vh",
       display: " flex",
       flexDirection: " column",
+      background: "linear-gradient(to right, #222, #999)",
   
     },
     PaletteColors: {

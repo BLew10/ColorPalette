@@ -34,19 +34,20 @@ const ColorPicker = (props) => {
         aiGeneratedPalette(style, numberofColors)
     }
     return (
-        <div className='flex flex-col justify-start items-center h-full w-[90%] [&>*]:my-3'>
+        <div className='flex flex-col justify-start items-center text-white h-full bg-black w-[90%] [&>*]:my-3'>
 
-            <Typography variant="h5" className='my-3' noWrap component="div">Design Your Palette</Typography>
-            <div className='my-2'>
+            <Typography variant="h4" className='my-3 ' noWrap component="div">Design Your Palette</Typography>
+            <div className='my-5'>
+            {!paletteIsFull && <Button variant='contained' color="primary"  onClick={() => addRandomColor()}> Random Color</Button>}
                 <Button variant='contained' color="secondary" onClick={() => clearPalette()}>Clear Palette</Button>
-                <Button variant='contained' color="primary" disabled={paletteIsFull} onClick={() => addRandomColor()}>Random Color</Button>
+               
             </div>
             <ValidatorForm onSubmit={()=>generatePalette()} className={`flex flex-col w-full`}>
-            <h1>Powered By Open AI</h1>
-            <input type="text" placeholder="Desired AI Style ex:'modern', 'classic', 'futuristic'" className='w-full' onChange={(e)=>setStyle(e.target.value)} value={style}/>
+            <h1 className='w-fit mx-auto font-bold'>Powered By Open AI:</h1>
+            <input type="text" placeholder="Desired Palette Style " className='w-full rounded px-3 py-2 my-3 text-black' onChange={(e)=>setStyle(e.target.value)} value={style}/>
             <div className='flex justify-between items-center'>
-            <label>Number of Colors Generated: </label>
-            <input type="number" className="w-1/3 text-right border-slate-200 border-2 my-2" onChange={(e)=>setnumberofColors(e.target.value)} value={numberofColors} max={20} min={1}/>
+            <label className='font-bold'>Number of Colors Generated: </label>
+            <input type="number" className="w-1/3 text-right border-slate-200 border-2 my-2 rounded px-3 py-2 text-black" onChange={(e)=>setnumberofColors(e.target.value)} value={numberofColors} max={20} min={1}/>
             </div>
                 <Button classname={` h-[100px] ${classes.addColor}`} variant='contained' type="submit" color="primary" style={{ backgroundColor: "blue" }} >Generate AI Palette</Button>
             </ValidatorForm>
@@ -59,7 +60,7 @@ const ColorPicker = (props) => {
                     onChange={handleChange}
                     validators={['required', 'uniqueColorName', 'uniqueColor']}
                     errorMessages={["Name your new Color!", "This name has already been used", "This color has already been added!"]}
-                    className={classes.colorNameInput}
+                    className={`${classes.colorNameInput} bg-white rounded text-black`}
                     margin="normal"
                 />
 
