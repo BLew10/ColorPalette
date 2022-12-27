@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { withStyles } from '@material-ui/styles'
 import styles from "../styles/PaletteListStyles"
 import axios from 'axios'
+import words from '../styles/img/words.png'
 
 function filterPalettes(objects, id) {
     return objects.filter(object => {
@@ -81,7 +82,7 @@ const PaltteList = (props) => {
             <div className={classes.container}>
                 <nav className={`${classes.nav} mt-[130px] mb-10`}>
 
-                    <h1 className='text-2xl text-center mx-auto '>Welcome to React Colors</h1>
+                    <h1 className=' text-center mx-auto text-3xl font-bold '>Welcome, {user.firstName}</h1>
                 
                    
                 </nav>
@@ -95,7 +96,7 @@ const PaltteList = (props) => {
 
                 </div>
                 {displayedPalettes.length > 0 ?
-                    <div className={`${classes.palettes} my-10 ${displayedPalettes.length > 9 && "overflow-y-scroll" }`}>
+                    <div className={`${classes.palettes} my-10 ${displayedPalettes.length > 6 && "overflow-y-scroll" }`}>
                     {displayedPalettes.map((palette, idx) =>
                         <MiniPalette {...palette} handleClick={goToPalette} userPalettesDisplayed={userPalettesDisplayed} triggerAction={triggerAction} idx={idx} key={palette.id} />)
                     }

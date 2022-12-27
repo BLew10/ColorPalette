@@ -45,11 +45,11 @@ const PaletteNavForm = (props) => {
 
 
   return (
-    <div style={{backgroundColor: "black"}} >
+    <div className="bg" style={{backgroundColor: ""}} >
       <CssBaseline />
       <AppBar position="fixed" open={open} className="w-full">
 
-        <Toolbar className="bg-black">
+        <Toolbar className="bg-[#222]">
           <div className='w-full flex justify-between items-center'>
             <div className='flex items-center'>
               <IconButton
@@ -65,7 +65,7 @@ const PaletteNavForm = (props) => {
                 Create a New Palette
               </Typography>
             </div>
-              <div className='flex [&>*]:mx-3 justify-between basis-1/4'>
+              <div className='flex [&>*]:mx-3 justify-between basis-[10%]'>
               <PaletteNamePopUp  handleSubmit={handleSubmit} handleChange={handleChange}  newPaletteName={newPaletteName}/>
                 <Button variant='contained' type="submit"  ><Link to="/dashboard" className='text-white'>Home</Link></Button>
               </div>

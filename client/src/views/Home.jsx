@@ -39,7 +39,7 @@ const Home = (props) => {
         }, 2700)
         setTimeout(() => {
             setClearColorBoxes(true)
-        }, 2700)
+        }, 2900)
         return () => clearInterval(interval);
     }, []);
 
@@ -53,7 +53,7 @@ const Home = (props) => {
     return showSplash ? (
         <div className='bg-black h-[100vh] w-[100vw] flex flex-col items-center justify-center'>
             <div className='center w-1/2'>
-                <div className={`name  mx-auto w-fit  flex flex-col items-center justify-center w-[50%]  ${showName && "show  font-bold animate-pulse"}`}> <span className="text-white z-10  text-6xl ">React Colors</span>
+                <div className={`name  mx-auto w-fit  flex flex-col items-center justify-center w-[50%]  ${showName && "show  font-bold animate-pulse"}`}> <span className="text-white z-10  text-6xl ">Palette Genie</span>
                     <span className="text-white z-10 underline text-md cursor-pointer" onClick={()=>setShowSplash(false)}>Click Here to Login/Register</span>
 
                     <img src={`https://img.icons8.com/ios-filled/100/${colorArr[currIndex]}/splash.png`} className={` splash  ${showName && "show"} ${classes.splashOne}`} />
@@ -73,11 +73,11 @@ const Home = (props) => {
     )
         :
         (
-            <div className={` ${classes.root} w-[100vw] h-[100vh] overflow-hidden bg-red-500`}>
-                <div className={` rounded-xl mx-auto my-10 w-[50%]`}>
+            <div className={` ${classes.root} w-[100vw] h-[100vh] overflow-hidden `}>
+                <div className={` rounded-xl mx-auto my-20 w-[50%] bg-black border-4 border-white`}>
 
                     <div className={`mx-auto  py-3 px-5 rounded-xl`}>
-                        <h1 className='p-4 h-full  text-white font-bold  basis-1/4 font-bold text-center my-3 text-5xl '>React Colors</h1>
+                        <h1 className='p-4 h-full  text-white font-bold  basis-1/4 font-bold text-center my-3 text-5xl '>Palette Genie</h1>
 
                         <div className='w-full font-bold '>
                             <button onClick={() => setRegistered(true)} className={`p-3  mx-0 w-1/2 rounded-l-lg bg-white border-2 border-slate-300 border-r-0 ${registered ? "  bg-[#252afd] text-white" : ""}`}>Login</button>

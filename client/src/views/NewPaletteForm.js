@@ -192,7 +192,7 @@ const NewPaletteForm = (props) => {
 
 
   return (
-    <Box sx={{ display: 'flex' }} className ="bg-gradient-to-r from-slate-900 to-gray-500 h-[100vh] w-[100%]">
+    <Box sx={{ display: 'flex' }} className ="bg-gray-500 h-[100vh] w-[100%]">
       <PaletteNavFrom open={open} handleDrawerOpen={handleDrawerOpen} handleChange={handleChange} newPaletteName={newPaletteName} handleSubmit={handleSubmit} />
       <Drawer
         sx={{
@@ -208,12 +208,12 @@ const NewPaletteForm = (props) => {
         open={open}
         className={`h-full `}
       >
-        <DrawerHeader className='bg-black'>
+        <DrawerHeader className='bg-[#222]'>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon className='text-white' /> : <ChevronRightIcon className='text-white' />}
           </IconButton>
         </DrawerHeader>
-        <div className={`flex flex-col items-center justify-center h-full bg-black `}>
+        <div className={`flex flex-col items-center justify-center h-full bg-[#222]`}>
           <ColorPicker handleColorChange={handleColorChange} addRandomColor={addRandomColor} addColor={addColor} newColorName={newColorName} handleChange={handleChange} paletteIsFull={paletteIsFull} newPaletteColor={newPaletteColor} clearPalette={clearPalette} aiGeneratedPalette={aiGeneratedPalette} />
         </div>
       </Drawer>

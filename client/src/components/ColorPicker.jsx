@@ -20,7 +20,6 @@ const styles = {
     },
     colorNameInput: {
         width: "100%",
-        height: "70px"
     }
 }
 
@@ -34,7 +33,7 @@ const ColorPicker = (props) => {
         aiGeneratedPalette(style, numberofColors)
     }
     return (
-        <div className='flex flex-col justify-start items-center text-white h-full bg-black w-[90%] [&>*]:my-3'>
+        <div className='flex flex-col justify-start items-center text-white h-full bg-[#222] w-[90%] [&>*]:my-3'>
 
             <Typography variant="h4" className='my-3 ' noWrap component="div">Design Your Palette</Typography>
             <div className='my-5'>
@@ -55,12 +54,12 @@ const ColorPicker = (props) => {
             <ValidatorForm onSubmit={() => addColor(newPaletteColor)} className={`flex flex-col`}>
                 <TextValidator
                     value={newColorName}
-                    variant="filled"
+                    
                     name="newColorName"
                     onChange={handleChange}
                     validators={['required', 'uniqueColorName', 'uniqueColor']}
                     errorMessages={["Name your new Color!", "This name has already been used", "This color has already been added!"]}
-                    className={`${classes.colorNameInput} bg-white rounded text-black`}
+                    className={`${classes.colorNameInput} bg-white rounded text-white`}
                     margin="normal"
                 />
 

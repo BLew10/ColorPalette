@@ -11,12 +11,13 @@ import Add from '@material-ui/icons/Add';
 const MiniPalette = (props) => {
   const { classes, PaletteName, emoji, colors, handleClick, id,  userPalettesDisplayed, triggerAction, PaletteId, PaletteUsers, idx} = props;
   const UserId = parseInt(window.sessionStorage.getItem("userId"))
-  const [AssociationId, setAssociationId] = useState(undefined)
+  const [assocId, setAssociationId] = useState(undefined)
   useEffect(() => {
-   
     if(userPalettesDisplayed && PaletteUsers.$values.length > 0) {
-      console.log(PaletteUsers.$values.find(value => value.UserId === UserId).AssociationId)
-      setAssociationId(PaletteUsers.$values.find(value => value.UserId === UserId).AssociationId)
+      if(PaletteUsers.$values.find(value => value.UserId === UserId) !== undefined) setAssociationId(PaletteUsers.$values.find(value => value.UserId === UserId).AssociationId)
+      
+      
+    
     }
   }, [userPalettesDisplayed, PaletteUsers]);
  
@@ -51,7 +52,7 @@ const MiniPalette = (props) => {
 
   return (
     <div className={classes.root} >
-       {userPalettesDisplayed ? <DeleteIcon className={classes.actionIcon} onClick={() => deletePalette(AssociationId)}/> : <Add className={classes.actionIcon} onClick={() => createAssociationToPalette({PaletteId, UserId})}/>}
+       {userPalettesDisplayed ? <DeleteIcon className={classes.actionIcon} onClick={() => deletePalette(assocId)}/> : <Add className={classes.actionIcon} onClick={() => createAssociationToPalette({PaletteId, UserId})}/>}
       <div className={classes.colors} onClick={() => handleClick(id)}>
         {miniColorBoxes}
       </div>

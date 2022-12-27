@@ -6,7 +6,7 @@
 
     80% {
         top: 50%;
-        left: 40%;
+        left: 30%;
 
     }
     100% {
@@ -18,8 +18,8 @@
 
 .corner-div-red {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-color: red;
     animation: convergeRed 3s ease-in-out;
 }
@@ -32,7 +32,7 @@
 
     80% {
         top: 50%;
-        left: 45%;
+        left: 40%;
 
     }
     100% {
@@ -44,8 +44,8 @@
 
 .corner-div-green {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-color: green;
     animation: convergeGreen 3s ease-in-out;
 }
@@ -70,39 +70,13 @@
 
 .corner-div-blue {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-color: blue;
     animation: convergeBlue 3s ease-in-out;
 }
 
 @keyframes convergeYellow {
-    0% {
-        top: 50%;
-        left: 0%;
-    }
-
-    80% {
-        top: 50%;
-        left: 55%;
-
-    }
-    100% {
-        top: 50%;
-        left: 100%;
-
-    }
-}
-
-.corner-div-yellow {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background-color: yellow;
-    animation: convergeYellow 3s ease-in-out;
-}
-
-@keyframes convergePurple {
     0% {
         top: 50%;
         left: 0%;
@@ -120,10 +94,36 @@
     }
 }
 
+.corner-div-yellow {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: yellow;
+    animation: convergeYellow 3s ease-in-out;
+}
+
+@keyframes convergePurple {
+    0% {
+        top: 50%;
+        left: 0%;
+    }
+
+    80% {
+        top: 50%;
+        left: 70%;
+
+    }
+    100% {
+        top: 50%;
+        left: 100%;
+
+    }
+}
+
 .corner-div-purple {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-color: purple;
     animation: convergePurple 3s ease-in-out;
 }
