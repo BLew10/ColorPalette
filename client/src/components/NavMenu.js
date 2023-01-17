@@ -62,13 +62,6 @@ const NavMenu = (props) => {
 
 
 
-
-
-
-
-
-
-
   return (
 <div className={`h-[12vh] static flex items-center flex  ${showSlider ? "justify-between lg:w-1/2 mx-auto" : "justify-center"}`}>
   <div className={`flex ${showSlider ? "justify-around w-full" : "justify-center s"} items-center  my-10 `}>

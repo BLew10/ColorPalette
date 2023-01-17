@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/styles'
 
 
 const ColorBox = (props) => {
-    const { paletteId, colorId, showFullPalette, luminance, name, classes } = props
+    const { paletteId, colorId, showFullPalette, name, classes } = props
 
     const color = props.background
 

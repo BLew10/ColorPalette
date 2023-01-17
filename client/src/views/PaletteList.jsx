@@ -1,12 +1,10 @@
-import { palette } from '@mui/system'
 import MiniPalette from '../components/MiniPalette'
 import MainNavBar from '../components/MainNavBar'
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { withStyles } from '@material-ui/styles'
 import styles from "../styles/PaletteListStyles"
 import axios from 'axios'
-import words from '../styles/img/words.png'
 
 function filterPalettes(objects, id) {
     return objects.filter(object => {

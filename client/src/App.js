@@ -34,15 +34,12 @@ const App = () => {
         nav(`/dashboard`)
       })
       .catch(err => { console.log(err)
-        // setErrors(err.response.data)
       });
 
   }
 
 
   useEffect(() => {
-   
-   
     let loggedIn = window.sessionStorage.getItem("userId")
       axios.get(`http://localhost:5029/api/getallPalettes`)
       .then(res => {

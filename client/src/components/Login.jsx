@@ -29,12 +29,10 @@ const Login = (props) => {
         })
             .then((res) => {
                 window.sessionStorage.setItem("userId", res.data.userId)
-                console.log(res)
                 nav(`/dashboard`)
 
             })
             .catch(err => {
-                console.log(err.response.data)
                 setErrors({ ...err.response.data })
             });
     };
