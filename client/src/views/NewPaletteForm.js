@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { API_KEY } from '../components/constants';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -73,10 +72,11 @@ const NewPaletteForm = (props) => {
   const [newPaletteName, setNewPaletteName] = useState("")
   const [aiLoading, setAiLoading] = useState(false)
   const paletteIsFull = colors.length >= 20
-
+  console.log(process.env.REACT_APP_API_KEY)
   const configuration = new Configuration({
     organization: "org-3fPHmekJ2gUQW7hcG1kJrpSW",
-    apiKey: API_KEY,
+    apiKey: process.env.REACT_APP_API_KEY
+    ,
   });
   const openai = new OpenAIApi(configuration);
 

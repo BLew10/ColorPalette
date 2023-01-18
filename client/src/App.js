@@ -24,7 +24,7 @@ const App = () => {
 
   const savePalette = (newPalette) => {
     axios({
-      url: "http://localhost:5029/api/palette/create",
+      url: "http://18.118.171.240/api/palette/create",
       method: "post",
       data: newPalette,
       contentType: "application/json"
@@ -41,7 +41,7 @@ const App = () => {
 
   useEffect(() => {
     let loggedIn = window.sessionStorage.getItem("userId")
-      axios.get(`http://localhost:5029/api/getallPalettes`)
+      axios.get(`http://18.118.171.240/api/getallPalettes`)
       .then(res => {
 
         let storedPalettes = JSON.parse(res.data)["$values"]

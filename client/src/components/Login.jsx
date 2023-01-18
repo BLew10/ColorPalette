@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
     useNavigate
 } from "react-router-dom"
-
+console.log(process.env.REACT_APP_API_KEY)
 const Login = (props) => {
     const nav = useNavigate()
 
@@ -22,7 +22,7 @@ const Login = (props) => {
         e.preventDefault();
         console.log(user);
         axios({
-            url: "http://localhost:5029/login",
+            url: "http://18.118.171.240/login",
             method: "post",
             data: user,
             contentType: "application/json"

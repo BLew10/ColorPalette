@@ -29,7 +29,7 @@ const UserForm = (props) => {
         e.preventDefault();
         console.log(user);
         axios({
-            url: "http://localhost:5029/api/user/create",
+            url: "http://18.118.171.240/api/user/create",
             method: "post",
             data: user,
             contentType: "application/json"

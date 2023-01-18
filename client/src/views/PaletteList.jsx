@@ -54,7 +54,7 @@ const PaltteList = (props) => {
         }
 
         axios({
-            url: `http://localhost:5029/api/loggedInUser/${user.id}`,
+            url: `http://18.118.171.240/api/loggedInUser/${user.id}`,
             method: "get",
             data: user,
             contentType: "application/json"

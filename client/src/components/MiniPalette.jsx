@@ -25,7 +25,7 @@ const MiniPalette = (props) => {
   const miniColorBoxes = colors.map((color, index) => <div className={classes.miniColor} style={{ backgroundColor: color.color }} key={index}></div>)
 
   const deletePalette = (associationId) => {
-    axios.post(`http://localhost:5029/api/association/${associationId}/delete`)
+    axios.post(`http://18.118.171.240/api/association/${associationId}/delete`)
     
     .then(res => triggerAction(idx, "delete"))
     .catch(err => console.log(err))
@@ -36,7 +36,7 @@ const MiniPalette = (props) => {
 
   const createAssociationToPalette = (newAssociation) => {
     axios({
-      url: "http://localhost:5029/api/association/create",
+      url: "http://18.118.171.240/api/association/create",
       method: "post",
       data: newAssociation,
       contentType: "application/json"
