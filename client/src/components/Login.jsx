@@ -3,7 +3,7 @@ import axios from 'axios';
 import {
     useNavigate
 } from "react-router-dom"
-console.log(process.env.REACT_APP_API_KEY)
+
 const Login = (props) => {
     const nav = useNavigate()
 

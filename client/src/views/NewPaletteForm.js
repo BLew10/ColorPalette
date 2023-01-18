@@ -72,7 +72,6 @@ const NewPaletteForm = (props) => {
   const [newPaletteName, setNewPaletteName] = useState("")
   const [aiLoading, setAiLoading] = useState(false)
   const paletteIsFull = colors.length >= 20
-  console.log(process.env.REACT_APP_API_KEY)
   const configuration = new Configuration({
     organization: "org-3fPHmekJ2gUQW7hcG1kJrpSW",
     apiKey: process.env.REACT_APP_API_KEY
